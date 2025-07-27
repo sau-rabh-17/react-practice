@@ -6,13 +6,11 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0);
   const addVal = () =>{
-    if(count + 1 > 20){
-      setCount(0);
-    } else{
-      setCount(count+1);
-    }
-    
-    console.log(count);
+    setCount(count + 1);
+  }
+
+  const subVal = () =>{
+    setCount(count - 1);
   }
 
   return (
@@ -22,7 +20,8 @@ function App() {
       <button
       onClick={addVal}
       >add value</button><br/>
-      <button>remove value</button>
+      <button
+      onClick={subVal}>remove value</button>
     </>
   )
 }
